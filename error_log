@@ -1,0 +1,3 @@
+[08-Dec-2018 16:22:41 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/xbi9s38lye38/public_html/roagro/application/controllers/Geo.php on line 545
+[08-Dec-2018 16:24:44 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) in /home/xbi9s38lye38/public_html/roagro/application/controllers/Geo.php on line 543
+[12-Dec-2018 03:25:18 UTC] PHP Fatal error:  Cannot redeclare Pdf_model::get_pdf() in /home/xbi9s38lye38/public_html/roagro/application/models/Pdf_model.php on line 87

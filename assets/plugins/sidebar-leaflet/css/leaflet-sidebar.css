@@ -1,0 +1,200 @@
+.lateral {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2000; }
+  .lateral.collapsed {
+    width: 40px; }
+  @media (min-width: 768px) {
+    .lateral {
+      top: 10px;
+      bottom: 10px;
+      transition: width 500ms; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .lateral {
+      width: 305px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .lateral {
+      width: 390px; } }
+  @media (min-width: 1200px) {
+    .lateral {
+      width: 460px; } }
+
+.lateral-left {
+  left: 0; }
+  @media (min-width: 768px) {
+    .lateral-left {
+      left: 10px; } }
+
+.lateral-right {
+  right: 0; }
+  @media (min-width: 768px) {
+    .lateral-right {
+      right: 10px; } }
+
+.lateral-tabs {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #fff; }
+  .lateral-left .lateral-tabs {
+    left: 0; }
+  .lateral-right .lateral-tabs {
+    right: 0; }
+  .lateral-tabs, .lateral-tabs > ul {
+    position: absolute;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .lateral-tabs > li, .lateral-tabs > ul > li {
+      width: 100%;
+      height: 40px;
+      color: #333;
+      font-size: 12pt;
+      overflow: hidden;
+      transition: all 80ms; }
+      .lateral-tabs > li:hover, .lateral-tabs > ul > li:hover {
+        color: #000;
+        background-color: #eee; }
+      .lateral-tabs > li.active, .lateral-tabs > ul > li.active {
+        color: #fff;
+        background-color: #0074d9; }
+      .lateral-tabs > li.disabled, .lateral-tabs > ul > li.disabled {
+        color: rgba(51, 51, 51, 0.4); }
+        .lateral-tabs > li.disabled:hover, .lateral-tabs > ul > li.disabled:hover {
+          background: transparent; }
+        .lateral-tabs > li.disabled > a, .lateral-tabs > ul > li.disabled > a {
+          cursor: default; }
+      .lateral-tabs > li > a, .lateral-tabs > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        color: inherit;
+        text-decoration: none;
+        text-align: center; }
+  .lateral-tabs > ul + ul {
+    bottom: 0; }
+
+.lateral-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .lateral-left .lateral-content {
+    left: 40px;
+    right: 0; }
+  .lateral-right .lateral-content {
+    left: 0;
+    right: 40px; }
+  .lateral.collapsed > .lateral-content {
+    overflow-y: hidden; }
+
+.lateral-pane {
+  display: none;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 10px 20px; }
+  .lateral-pane.active {
+    display: block; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .lateral-pane {
+      min-width: 265px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .lateral-pane {
+      min-width: 350px; } }
+  @media (min-width: 1200px) {
+    .lateral-pane {
+      min-width: 420px; } }
+
+.lateral-header {
+  margin: -10px -20px 0;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  font-size: 14.4pt;
+  color: #fff;
+  background-color: #0074d9; }
+  .lateral-right .lateral-header {
+    padding-left: 40px; }
+
+.lateral-close {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer; }
+  .lateral-left .lateral-close {
+    right: 0; }
+  .lateral-right .lateral-close {
+    left: 0; }
+
+.lateral-left ~ .lateral-map {
+  margin-left: 40px; }
+  @media (min-width: 768px) {
+    .lateral-left ~ .lateral-map {
+      margin-left: 0; } }
+
+.lateral-right ~ .lateral-map {
+  margin-right: 40px; }
+  @media (min-width: 768px) {
+    .lateral-right ~ .lateral-map {
+      margin-right: 0; } }
+
+.lateral {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65); }
+  .lateral.leaflet-touch {
+    box-shadow: none;
+    border-right: 2px solid rgba(0, 0, 0, 0.2); }
+  @media (min-width: 768px) {
+    .lateral {
+      border-radius: 4px; }
+      .lateral.leaflet-touch {
+        border: 2px solid rgba(0, 0, 0, 0.2); } }
+
+@media (min-width: 768px) {
+  .lateral-left ~ .lateral-map .leaflet-left {
+    transition: left 500ms; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .lateral-left ~ .lateral-map .leaflet-left {
+    left: 315px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lateral-left ~ .lateral-map .leaflet-left {
+    left: 400px; } }
+
+@media (min-width: 1200px) {
+  .lateral-left ~ .lateral-map .leaflet-left {
+    left: 470px; } }
+
+@media (min-width: 768px) {
+  .lateral-left.collapsed ~ .lateral-map .leaflet-left {
+    left: 50px; } }
+
+@media (min-width: 768px) {
+  .lateral-right ~ .lateral-map .leaflet-right {
+    transition: right 500ms; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .lateral-right ~ .lateral-map .leaflet-right {
+    right: 315px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lateral-right ~ .lateral-map .leaflet-right {
+    right: 400px; } }
+
+@media (min-width: 1200px) {
+  .lateral-right ~ .lateral-map .leaflet-right {
+    right: 470px; } }
+
+@media (min-width: 768px) {
+  .lateral-right.collapsed ~ .lateral-map .leaflet-right {
+    right: 50px; } }
